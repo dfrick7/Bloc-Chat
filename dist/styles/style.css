@@ -1,0 +1,28 @@
+.flex-container {
+    display: flex;
+    flex-flow: wrap;
+}
+.flex-container>* {
+    padding: 10px;
+    flex: 1 100%;
+}
+.header {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.header > h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.sideBar {
+    background-color: #f2f2f2;
+    float: left;
+    font-size: 14px;
+}
+
+.sideBar > h1 {
+    font-size: 18px;
+}
