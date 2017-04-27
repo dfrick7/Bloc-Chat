@@ -1,10 +1,18 @@
 <div class="flex-container">
-    <header class="header">
-        <h1>{{ chatty }}</h1>
-    </header>
-    <content class="sideBar">
-        <h1>{{ chitChat }}</h1>
-        <button ng-click="open()">New Room</button>
-        <div ng-repeat="room in rooms">{{ room.name }} </div>
-    </content>
+    <div class="row">
+        <div class="col-md-2">
+          <header class="header">
+              <h1>{{ chatty }}</h1>
+          </header>
+          <content class="sideBar">
+              <h1>{{ chitChat }}</h1>
+              <button ng-click="open()">New Room</button>
+              <div ng-repeat="room in rooms" ng-click="selectRoom(room.$id)">{{ room.name }} </div>
+          </content>
+        </div>
+        <div class="col-md-10">
+            <p ng-repeat="message in messages">{{message.content}} <input ng-model="date1" datetime-picker date-only />
+ </p>
+        </div>
+    </div>
 </div>

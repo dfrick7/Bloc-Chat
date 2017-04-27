@@ -5,7 +5,7 @@
                 enabled: true,
                 requireBase: false
             });
-        
+            
         $stateProvider
             .state('home',{
                 url: '/',
