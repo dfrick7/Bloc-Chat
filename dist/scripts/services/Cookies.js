@@ -3,12 +3,14 @@
     var currentUser = $cookies.get('blocChatCurrentUser');
     if (!currentUser || currentUser === '') {
       $uibModal.open ({
-      // Do something to allow users to set their username
+
+      templateUrl: '/templates/setUser.html',
+      controller: 'UserModalCtrl'
       })
     }
   }
 
   angular
     .module('blocChat')
-    .run(['$cookies', 'uibModal' BlocChatCookies]);
+    .run(['$cookies', '$uibModal', BlocChatCookies]);
 })();

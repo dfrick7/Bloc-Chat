@@ -27,6 +27,13 @@
         {{message.sentAt}}
       </div>
     </div>
-      <input ng-model="date1" datetime-picker date-only />
+    <div class="row">
+      <div class="col-md-10">
+        <input type="text" ng-model="newMessage" class="form-control" />
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default" ng-click="sendMessage()">Send</button>
+      </div>
+    </div>
   </div>
 </div>
