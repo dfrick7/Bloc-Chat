@@ -15,11 +15,10 @@
       },
 
       send: function (newMessage, roomId) {
-        console.log(newMessage, roomId)
-        var message = {
+          var message = {
           username: $cookies.get('blocChatCurrentUser'),
           content: newMessage,
-          sentAt: (new Date()).toString(),
+          sentAt: firebase.database.ServerValue.TIMESTAMP,
           roomId: roomId
         }
         messages.$add(message);

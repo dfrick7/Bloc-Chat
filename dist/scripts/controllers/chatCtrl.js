@@ -22,10 +22,15 @@
         };
 
         $scope.sendMessage = function() {
-          Message.send($scope.newMessage, $scope.roomId);
+          if ($scope.messages == ''){
+            return null;
+          }
+          else {
+            Message.send($scope.newMessage, $scope.roomId);
           $scope.newMessage = '';
-        }
-    }
+          }
+        };
+    };
 
     angular
         .module('blocChat')
